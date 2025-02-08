@@ -1,0 +1,102 @@
+/* Import Google Font for Modern Look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2a2a72, #009ffd);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 320px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #232526, #414345);
+    color: #f8f9fa;
+}
+
+/* Glassmorphism Card */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background 0.3s;
+    position: relative;
+}
+
+/* Dark Mode Container */
+body.dark-mode .container {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+body.dark-mode #darkModeToggle {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+/* Scan Result Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#result {
+    animation: fadeIn 0.5s ease-in-out;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Safe and Phishing Alert Boxes */
+.safe {
+    background: rgba(46, 204, 113, 0.85);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.phishing {
+    background: rgba(231, 76, 60, 0.85);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+}
